@@ -3,11 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="script.js" defer></script>
+    <script src="index.js" defer></script>
+    <link rel="stylesheet" href="styles.css">
     <title>Rock Paper Scissor</title>
 </head>
 
 <body>
-    
+    <!-- header -->
+    <div class="header flex-container flex-center">
+        <div class="fs-3 text-bold">
+            ROCK | PAPER | SCISSORS
+        </div>
+    </div>
+    <!-- winner annoucement -->
+    <div class="flex-container flex-column flex-center p-2">
+        <div class="announce-win text-bold fs-2" id="winner-board">
+            Let the game begin!
+        </div>
+        <div class="explain-choice p-1 fs-1" id="explanation-board">
+            First player to score 5 points wins the game. Lets Go!!!
+        </div>
+    </div>
+    <!-- player and computer choices -->
+    <div class="flex-container flex-center">
+        <div class="cards g-10 flex-container flex-center shadow-bottom ps-4 pe-4">
+            <!-- player choice -->
+            <div class="flex-container flex-column flex-center g-2">
+                <img src="images/question-mark.png" alt="Player Choice" class="choice-img" id="player-choice-image">
+                <div class="fs-2 text-bold">
+                    Player: </span><span class="score" id="player-score">0</span>
+                </div>
+            </div>
+            <!-- computer choice -->
+            <div class="flex-container flex-column flex-center g-2">
+                <img src="images/question-mark.png" alt="Computer Choice" class="choice-img" id="computer-choice-image">
+                <div class="fs-2 text-bold">
+                    Computer: <span class="score" id="computer-score">0</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- player options -->
+    <div class="flex-container flex-center play-options flex-grow g-4 mt-3">
+        <button class="btn round shadow-bottom" id="btn-rock">
+            <img src="images/hand-rock.png" alt="Hand Rock" class="p-2" id="rock">
+        </button>
+        <button class="btn round shadow-bottom" id="btn-paper">
+            <img src="images/hand-paper.png" alt="Hand Paper" class="p-2" id="paper">
+        </button>
+        <button class="btn round shadow-bottom" id="btn-scissors">
+            <img src="images/hand-scissors.png" alt="Hand Scissors" class="p-2"
+            id="scissors">
+        </button>
+    </div>
+    <!-- footer -->
+    <div class="footer flex-container flex-center">
+        <div>Copyright &copy; 2023 | Bright Owusu</div>   
+        <div class="flex-container flex-center">
+            <a href="https://github.com/bright-owusu" class="ps-half" target="_blank">
+                <img src="images/github.png" class="logo" alt="Github Logo">
+            </a>
+        </div>
+    </div>
+
+    <!-- replay game modal -->
+    <div id="replay-modal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content glass">
+          <div class="flex-container flex-column flex-center p-2 modal-body">
+            <div class="fs-3 mt-2 mb-2 p-0 text-bold" id="win-or-lose">
+                <!-- outcome displays here -->
+            </div>
+            <button class="" id="replay-button">Play Again</button>
+          </div>
+        </div>
+    </div>
 </body>
 </html>
